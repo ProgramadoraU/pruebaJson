@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <style>
+        body{
+            font-size: 17px;
+            font-family:sans-serif,'Times New Roman', serif;
+        }
+        fieldset{
+            margin:10px;
+            padding:7px;
+        }
+        input{
+            margin:10px;
+            display:block;
+        }
+        textarea{
+            font-size: 17px;
+            font-family:sans-serif,'Times New Roman', serif;
+            width:17em;
+            height:10em;
+        }
+        button{
+            width:9rem;
+            height:3rem;
+            font-size: 17px;
+            font-family:sans-serif,'Times New Roman', serif;
+        }
+        label{
+            display:block
+        }
+        label > input{
+            display:inline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Taller Formularios</h1>
+
+    <!--Formulario-->
+    <form action="" name="formulario-registro">
+        <!--Datos obligatorios-->
+        <fieldset>
+            <legend>Datos oblilgatorios</legend>
+            <label for="name">Nombre</label>
+            <input id = "name" type="text" required>
+            <label id = "password" for="password">Contraseña</label>
+            <input type="password" required>
+            <label for="email">Correo</label>
+            <input id = "email" type="email" required>
+            <label for="dateBirth">Fecha de nacimiento</label>
+            <input type="date" required>
+            <label for="hour">Hora nacimiento</label>
+            <input id="hour" type="time" required>
+            <label for="hourEntry">Hora y fecha de ingreso</label>
+            <input type="datetime-local" required>
+            <!--Cuidades visitadas-->
+            Ciudades que ha visitados
+            <label for="Chicago" class="op">
+                <input id = "Chicago" type="checkbox" name="cities" value="Chicago" >Chicago</label>
+            <label for="Paris" >
+                <input type="checkbox" name = "cities" value="Paris">Paris</label>
+            
+            <label for="Londres">
+                <input type="checkbox" name = "cities" value="Paris">Londres
+            </label>
+            <!--Sexo-->
+            Sexo
+            <label for="hombre">
+            <input type="radio" name ="sexo" value="hombre" required>Hombre
+            </label>
+            <label for="mujer">
+            <input type="radio" name="sexo" value="mujer" required>Mujer
+            </label>
+        </fieldset>
+        <!--Datos opcionales-->
+        <fieldset>
+            <legend>Datos opciones</legend>
+            <label for="message">Mensaje</label>
+            <textarea placeholder="Escriba aquí su mensaje"></textarea>
+            <!--Lista de seleccion-->
+
+            <label for="place"> ¿Desde qué lugar escribe?</label>
+            <select name="place" id="" class="op">
+                <option value="" selected>Selecione una opcion</option>
+                <option value="Brazil">Brazil</option>
+                <option value="Peru">Peru</option>
+                <option value="Mexico">Mexico</option>
+                <option value="Francia">Francia</option>
+            </select>
+        </fieldset>
+        <!--Enviar formulario-->
+        <button type ="submit">Enviar</button>
+        <button type="reset" >Borrar</button>
+    </form>
+</body>
+</html>
